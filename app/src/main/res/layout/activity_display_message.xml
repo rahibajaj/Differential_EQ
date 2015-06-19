@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.mycompany.myfirstapp.DisplayMessageActivity"
+    android:background="#212121">
+    <TextView
+        android:id="@+id/first_variable"
+        android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF" />
+    <EditText
+        android:id="@+id/edit_message1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_variable"
+        android:hint="@string/edit_message1"
+        android:textColor="#FFFFFF" />
+    <TextView
+        android:id="@+id/second_variable"
+        android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_message1"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/edit_message2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_variable"
+        android:hint="@string/edit_message2"
+        android:textColor="#FFFFFF" />
+    <TextView
+        android:id="@+id/third_variable"
+        android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_message2"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/edit_message3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/third_variable"
+        android:hint="Enter the value of independent variable"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/second_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_message3"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:text="@string/button_send"
+        android:onClick="sendMessage1"
+        android:textColor="#000000" />
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="edit_message2">Enter the second value</string>
+    <string name="edit_message1">Enter the first value</string>
+    <string name="edit_message3">Enter the value of independent variable</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_bla">bla</string>
+    <string name="first_variable">Enter the value of first variable</string>
+    <string name="first_button">Send1</string>
+    <string name="second_button">Send2</string>
+    <string name="second_variable">Enter the value of second variable</string>
+    <string name="title_activity_evaluation">Evaluation</string>
+</resources>
