@@ -38,8 +38,9 @@ public class Evaluation extends ActionBarActivity {
         Var[1]=(String)Variables.pop();
         Var[0]=(String)Variables.pop();
         double final_result=runge_kutta(expr,final_value);
+        String result=String.format("%.6g%n", final_result);
         TextView textView4=(TextView) findViewById(R.id.second_button);
-        textView4.setText(Double.toString(final_result));
+        textView4.setText(result);
     }
     public int dep_var()
     {
@@ -134,7 +135,7 @@ public class Evaluation extends ActionBarActivity {
                                  break;
                         case 'l':a=(double)output.pop();
                                  if(temp1.equals("ln"))
-                                     a=Math.log(a);
+                                     result=Math.log(a);
                                  output.push(result);
                                  break;
                         case 'a':a=(double)output.pop();
