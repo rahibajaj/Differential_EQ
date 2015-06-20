@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/instructions"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EQSolve"
+        android:layout_marginTop="80dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The program accepts a linear ordinary differential equation" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The equation should be implicit in nature" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For example \ny'=x+y" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your equation and press Equation" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In the next window that appears, you will have to provide the initial values of the independent and dependent variables and the final value of independent variable at which you want the solution to the dependent variable" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hit 'Solution' to get the answer" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can close the instructions by clicking 'Close' below" />
+
+    <Button
+    android:id="@+id/close"
+    android:layout_marginTop="10dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Close" />
+
+
+</LinearLayout>
