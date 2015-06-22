@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -265,6 +266,14 @@ public class Evaluation extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void newEquation(View view)
+    {
+        Intent intent = new Intent(this,MyActivity.class);
+        startActivity(intent);
+    }
+
+
     protected void onPause()
     {
         super.onPause();

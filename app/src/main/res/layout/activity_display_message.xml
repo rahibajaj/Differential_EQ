@@ -8,9 +8,11 @@
     android:paddingTop="16dp"
     tools:context="com.mycompany.myfirstapp.DisplayMessageActivity"
     android:background="#1684CA">
+
     <TextView
         android:id="@+id/first_variable"
-        android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:text="@string/hello_world"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#000000" />
     <EditText
@@ -20,13 +22,14 @@
         android:layout_below="@id/first_variable"
         android:hint="Enter the initial value of independent variable"
         android:textColor="#FFFFFF" />
+
     <TextView
         android:id="@+id/second_variable"
-        android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:text="@string/hello_world"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_message1"
-        android:textColor="#FFFFFF" />
-
+        android:textColor="#000000" />
     <EditText
         android:id="@+id/edit_message2"
         android:layout_width="match_parent"
@@ -34,13 +37,14 @@
         android:layout_below="@id/second_variable"
         android:hint="Enter the initial value of dependent variable"
         android:textColor="#FFFFFF" />
+
     <TextView
         android:id="@+id/third_variable"
-        android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:text="@string/hello_world"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_message2"
-        android:textColor="#FFFFFF" />
-
+        android:textColor="#000000" />
     <EditText
         android:id="@+id/edit_message3"
         android:layout_width="match_parent"
@@ -60,7 +64,4 @@
         android:onClick="sendMessage1"
         android:textColor="#000000" />
 
-
-
 </RelativeLayout>
-

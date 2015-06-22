@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsoluteLayout;
 import android.widget.EditText;
 //import android.os.Bundle;
 import android.app.Activity;
@@ -68,10 +70,7 @@ public class MyActivity extends ActionBarActivity {
         p.y = location[1];
     }
 
-    private void showPopup(final Activity context, Point p) {
-        int popupWidth = 800;
-        int popupHeight = 1000;
-
+    private void showPopup(final Activity context, final Point p) {
 
         LinearLayout viewGroup = (LinearLayout) context.findViewById(R.id.instructions);
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -79,8 +78,8 @@ public class MyActivity extends ActionBarActivity {
 
         final PopupWindow popup = new PopupWindow(context);
         popup.setContentView(layout);
-        popup.setWidth(popupWidth);
-        popup.setHeight(popupHeight);
+        popup.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+        popup.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
         popup.setFocusable(true);
 
         int OFFSET_X = 30;
@@ -89,6 +88,15 @@ public class MyActivity extends ActionBarActivity {
         popup.setBackgroundDrawable(new BitmapDrawable());
 
         popup.showAtLocation(layout, Gravity.NO_GRAVITY, p.x + OFFSET_X, p.y + OFFSET_Y);
+
+        Button next = (Button) layout.findViewById(R.id.next);
+        next.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popup.dismiss();
+                showPopup2(MyActivity.this, p);
+            }
+        });
 
         Button close = (Button) layout.findViewById(R.id.close);
         close.setOnClickListener(new OnClickListener() {
@@ -100,6 +108,34 @@ public class MyActivity extends ActionBarActivity {
         });
     }
 
+    private void showPopup2(final Activity context, Point p) {
+
+        LinearLayout viewGroup = (LinearLayout) context.findViewById(R.id.instructions2);
+        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = layoutInflater.inflate(R.layout.instruct_popup2, viewGroup);
+
+        final PopupWindow popup = new PopupWindow(context);
+        popup.setContentView(layout);
+        popup.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+        popup.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+        popup.setFocusable(true);
+
+        int OFFSET_X = 30;
+        int OFFSET_Y = 30;
+
+        popup.setBackgroundDrawable(new BitmapDrawable());
+
+        popup.showAtLocation(layout, Gravity.NO_GRAVITY, p.x + OFFSET_X, p.y + OFFSET_Y);
+
+        Button close = (Button) layout.findViewById(R.id.close2);
+        close.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                popup.dismiss();
+            }
+        });
+    }
 
     public String equation_generator(String equation)
     {

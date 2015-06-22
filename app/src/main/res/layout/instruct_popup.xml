@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="EQSolve"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="35dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -56,19 +56,43 @@
         android:text="Hit 'Solution' to get the answer" />
 
     <TextView
+        android:id="@+id/textView15"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For further insructions, click 'Next'" />
+
+    <TextView
         android:id="@+id/textView8"
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="You can close the instructions by clicking 'Close' below" />
 
-    <Button
-    android:id="@+id/close"
-    android:layout_marginTop="10dp"
-    android:layout_gravity="center_horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Close" />
 
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/next"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:onClick="showPopup2"
+        />
+
+    <Button
+        android:id="@+id/close"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        />
+    </RelativeLayout>
 
 </LinearLayout>
