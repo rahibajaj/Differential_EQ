@@ -1,6 +1,7 @@
 package com.mycompany.myfirstapp;
 
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -49,6 +50,8 @@ public class DisplayMessageActivity extends ActionBarActivity {
         textView3.setTextSize(20);
         textView2.setText(Second_variable);
         textView3.setText(dep);
+
+//        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
     public String an(String First_variable,String Second_variable)
     {
@@ -165,6 +168,18 @@ public class DisplayMessageActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+/*        switch(id)
+        {
+            case R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                //this.finish();
+                return true;
+            case R.id.action_settings
+                return true
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+*/
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;

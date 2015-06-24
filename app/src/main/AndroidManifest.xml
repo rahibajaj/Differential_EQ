@@ -9,7 +9,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MyActivity"
-            android:label="Equation Input"
+            android:label="EQSolve"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
